@@ -1,0 +1,30 @@
+<div>
+    <form asp-action="ClearSession" asp-controller="Home">
+    <button>Logout</button>
+    </form>
+    <p>@Context.Session.GetString("Name")</p>
+    <p>@Context.Session.GetInt32("Score")</p>
+    
+    <div>
+        <div style="display: flex;">
+            <form asp-action="Math" asp-controller="Home">
+                <input type="hidden" name="operation" value="1">
+            <button style="width: 120px;" name="Score" value="1">+1</button>
+            </form>
+            <form asp-action="Math" asp-controller="Home">
+                <input type="hidden" name="operation" value="2">
+            <button style="width: 120px;">-1</button>
+            </form>
+        </div>
+        <div style="display: flex;">
+            <form asp-action="Math" asp-controller="Home">
+                <input type="hidden" name="operation" value="3">
+            <button style="width: 120px;">x2</button>
+            </form>
+            <form asp-action="Math" asp-controller="Home">
+                <input type="hidden" name="operation" value="4">
+            <button style="width: 120px;">+ Random</button>
+            </form>
+        </div>
+    </div>
+</div>
